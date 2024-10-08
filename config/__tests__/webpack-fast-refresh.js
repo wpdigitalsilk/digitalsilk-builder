@@ -51,7 +51,7 @@ describe('webpack.config.js', () => {
 		};
 		getBuildFilesMock.mockReturnValue(entryBuildFiles);
 		getPackageMock.mockReturnValue({
-			'digitalsilk-builder': {
+			'digitalsilk-setup': {
 				entry: entryBuildFiles,
 			},
 		});

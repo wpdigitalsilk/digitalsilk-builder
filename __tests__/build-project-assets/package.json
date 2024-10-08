@@ -1,6 +1,6 @@
 {
     "name": "test-build-project-assets",
-    "digitalsilk-builder": {
+    "digitalsilk-setup": {
         "useBlockAssets": false,
         "entry": {
             "frontend": "./__fixtures__/assets/js/frontend.js",

@@ -1,6 +1,6 @@
 {
     "name": "test-build-project",
-    "digitalsilk-builder": {
+    "digitalsilk-setup": {
         "entry": {
             "admin": "./__fixtures__/assets/js/admin.js",
             "frontend": "./__fixtures__/assets/js/frontend.js"

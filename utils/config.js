@@ -94,7 +94,7 @@ const getDefaultConfig = () => {
  */
 const getDSScriptsConfig = () => {
 	const packageJson = getPackage();
-	const config = packageJson['digitalsilk-builder'] || packageJson['@digitalsilk/scripts']
+	const config = packageJson['digitalsilk-setup'] || packageJson['@digitalsilk/scripts']
 	const defaultConfig = getDefaultConfig();
 
 	if (!config) {
@@ -156,7 +156,7 @@ const normalizePackageType = (type) => {
 };
 
 /**
- * Returns digitalsilk-builder configs for package builds. If digitalsilk-builder is not configured for building packages,
+ * Returns digitalsilk-setup configs for package builds. If digitalsilk-setup is not configured for building packages,
  * this returns false.
  *
  * @returns {object | boolean}

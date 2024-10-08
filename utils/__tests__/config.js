@@ -26,7 +26,7 @@ describe('getDSScriptsConfig', () => {
 
 	it('overrides and merges config properly', () => {
 		getPackageMock.mockReturnValueOnce({
-			'digitalsilk-builder': {
+			'digitalsilk-setup': {
 				entry: {
 					'entry1.js': 'dist/output.js',
 				},
@@ -104,7 +104,7 @@ describe('getDSScriptsPackageBuildConfig', () => {
 				'*': './dist/index.js',
 				'./utils': './dist/utils.js',
 			},
-			'digitalsilk-builder': {
+			'digitalsilk-setup': {
 				libraryName: 'myComponentLibrary',
 			},
 		});

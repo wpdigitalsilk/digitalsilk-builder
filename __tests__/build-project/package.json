@@ -1,6 +1,6 @@
 {
     "name": "test-build-project",
-    "digitalsilk-builder": {
+    "digitalsilk-setup": {
         "useBlockAssets": false,
         "entry": {
             "admin": "./__fixtures__/assets/js/admin.js",

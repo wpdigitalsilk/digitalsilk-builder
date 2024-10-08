@@ -1,10 +1,10 @@
+const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
-const DependencyExtractionWebpackPlugin = require('@wordpress/dependency-extraction-webpack-plugin');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const WebpackBar = require('webpackbar');
-const path = require('path');
+const DependencyExtractionWebpackPlugin = require('@wordpress/dependency-extraction-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
@@ -12,8 +12,8 @@ const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
 
 const RemoveEmptyScriptsPlugin = require('./plugins/remove-empty-scripts');
 const CleanExtractedDeps = require('./plugins/clean-extracted-deps');
-const DSBuilderTypeScriptPlugin = require('./plugins/tsc');
-const NoBrowserSyncPlugin = require('./plugins/no-browser-sync');
+const DSBuilderTypeScriptPlugin = require('./plugins/typescript');
+
 const {
 	hasStylelintConfig,
 	fromConfigRoot,
@@ -21,6 +21,7 @@ const {
 	getArgFromCLI,
 	maybeInsertStyleVersionHash,
 } = require('../../utils');
+
 const { isPackageInstalled } = require('../../utils/package');
 
 const removeDistFolder = (file) => {
@@ -37,7 +38,6 @@ module.exports = ({
 	projectConfig: {
 		devServer,
 		filenames,
-		devURL,
 		devServerPort,
 		paths,
 		wpDependencyExternals,
@@ -50,37 +50,6 @@ module.exports = ({
 }) => {
 	const hasReactFastRefresh = hot && !isProduction;
 
-	const hasBrowserSync = isPackageInstalled('browser-sync-webpack-plugin') && isPackageInstalled('browser-sync');
-
-	const shouldLoadBrowserSync = !isProduction && devURL && !hasReactFastRefresh && hasBrowserSync;
-
-	let browserSync = !isProduction && devURL ? new NoBrowserSyncPlugin() : false;
-	if (shouldLoadBrowserSync) {
-		// eslint-disable-next-line global-require, import/no-extraneous-dependencies
-		const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
-		browserSync = new BrowserSyncPlugin(
-			{
-				host: 'localhost',
-				port: getArgFromCLI('--port') || 3000,
-				proxy: devURL,
-				open: false,
-				files: ['**/*.php', '**/*.js', 'dist/**/*.css'],
-				ignore: ['dist/**/*.php', 'dist/**/*.js'],
-				serveStatic: ['.'],
-				rewriteRules: [
-					{
-						match: /wp-content\/themes\/.*\/dist/g,
-						replace: 'dist',
-					},
-				],
-			},
-			{
-				injectCss: true,
-				reload: false,
-			},
-		);
-	}
-
 	const blocksSourceDirectory = path.resolve(process.cwd(), paths.blocksDir);
 
 	return [
@@ -90,6 +59,7 @@ module.exports = ({
 					template: 'dist/index.html',
 				}),
 			}),
+
 		new ESLintPlugin({
 			failOnError: false,
 			fix: false,
@@ -180,7 +150,7 @@ module.exports = ({
 					},
 				].filter(Boolean),
 			}),
-		devURL && browserSync,
+
 		// Lint CSS.
 		new StyleLintPlugin({
 			context: path.resolve(process.cwd(), paths.srcDir),
@@ -209,8 +179,8 @@ module.exports = ({
 
 		// Fancy WebpackBar.
 		!hasReactFastRefresh && new WebpackBar(webpackbarArguments),
-		// dependencyExternals variable controls whether scripts' assets get
-		// generated, and the default externals set.
+
+		// wpDependencyExternals variable controls whether scripts assets get generated, and the default externals set.
 		wpDependencyExternals &&
 			!isPackage &&
 			new DependencyExtractionWebpackPlugin({
