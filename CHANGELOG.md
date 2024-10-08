@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.0.4
+
+### Patch Changes
+
+- remove deps
+
 ## 0.0.3
 
 ### Patch Changes
