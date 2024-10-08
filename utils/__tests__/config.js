@@ -70,9 +70,9 @@ describe('getDSScriptsPackageBuildConfig', () => {
 			main: 'dist/index.js',
 			'umd:main': 'dist/index.umd.js',
 			dependencies: {
-				'read-pkg': '^5.2.0',
-				'read-pkg-up': '^1.0.1',
-				'resolve-bin': '^0.4.0',
+				'read-pkg': '5.2.0',
+				'read-pkg-up': '7.0.1',
+				'resolve-bin': '^1.0.1',
 			},
 		});
 
@@ -96,9 +96,9 @@ describe('getDSScriptsPackageBuildConfig', () => {
 			'umd:main': 'dist/index.umd.js',
 			style: 'dist/index.css',
 			dependencies: {
-				'read-pkg': '^5.2.0',
-				'read-pkg-up': '^1.0.1',
-				'resolve-bin': '^0.4.0',
+				'read-pkg': '5.2.0',
+				'read-pkg-up': '7.0.1',
+				'resolve-bin': '^1.0.1',
 			},
 			exports: {
 				'*': './dist/index.js',
@@ -134,9 +134,9 @@ describe('getDSScriptsPackageBuildConfig', () => {
 			main: 'dist/index.js',
 			'umd:main': 'dist/index.umd.js',
 			dependencies: {
-				'read-pkg': '^5.2.0',
-				'read-pkg-up': '^1.0.1',
-				'resolve-bin': '^0.4.0',
+				'read-pkg': '5.2.0',
+				'read-pkg-up': '7.0.1',
+				'resolve-bin': '^1.0.1',
 			},
 			'@digitalsilk/scripts': {
 				libraryName: 'myComponentLibrary',
@@ -161,9 +161,9 @@ describe('getDSScriptsPackageBuildConfig', () => {
 			main: 'dist/index.js',
 			'umd:main': 'dist/index.umd.js',
 			dependencies: {
-				'read-pkg': '^5.2.0',
-				'read-pkg-up': '^1.0.1',
-				'resolve-bin': '^0.4.0',
+				'read-pkg': '5.2.0',
+				'read-pkg-up': '7.0.1',
+				'resolve-bin': '^1.0.1',
 			},
 			'@digitalsilk/scripts': {
 				libraryName: 'myComponentLibrary',

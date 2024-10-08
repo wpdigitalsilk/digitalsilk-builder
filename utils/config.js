@@ -94,7 +94,7 @@ const getDefaultConfig = () => {
  */
 const getDSScriptsConfig = () => {
 	const packageJson = getPackage();
-	const config = packageJson['digitalsilk-builder'];
+	const config = packageJson['digitalsilk-builder'] || packageJson['@digitalsilk/scripts']
 	const defaultConfig = getDefaultConfig();
 
 	if (!config) {
@@ -135,6 +135,7 @@ const safeVariableName = (name) => {
 	const INVALID_ES3_IDENT = /((^[^a-zA-Z]+)|[^\w.-])|([^a-zA-Z0-9]+$)/g;
 	const normalized = removeScope(name).toLowerCase();
 	const identifier = normalized.replace(INVALID_ES3_IDENT, '');
+
 	return camelCase(identifier);
 };
 
