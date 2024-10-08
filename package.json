@@ -1,0 +1,89 @@
+{
+    "name": "digitalsilk-builder",
+    "version": "0.0.1",
+    "description": "Digital Silk asset builder for Gutenberg projects",
+    "homepage": "https://github.com/wpdigitalsilk/digitalsilk-builder/blob/master/README.md",
+
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/wpdigitalsilk/digitalsilk-builder.git"
+    },
+    "author": "Digital Silk",
+    "license": "GPL-2.0-or-later",
+    "publishConfig": {
+        "access": "public"
+    },
+    "engines": {
+        "node": ">=18"
+    },
+    "bin": {
+        "digitalsilk-builder": "bin/digitalsilk-builder.js"
+    },
+    "scripts": {
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "test:update": "jest --updateSnapshot",
+        "lint": "eslint .",
+        "publish:packages": "changeset && changeset version && changeset publish",
+        "publish:prepare": "changeset && changeset version"
+    },
+    "dependencies": {
+        "@babel/core": "^7.25.2",
+        "@babel/eslint-parser": "^7.25.1",
+        "@csstools/postcss-global-data": "^3.0.0",
+        "@pmmmwh/react-refresh-webpack-plugin": "^0.5.15",
+        "@svgr/webpack": "^8.1.0",
+        "@wordpress/dependency-extraction-webpack-plugin": "^6.8.0",
+        "@wordpress/eslint-plugin": "^21.1.2",
+        "@wordpress/jest-console": "^8.8.0",
+        "babel-jest": "^29.7.0",
+        "babel-loader": "^9.2.1",
+        "camelcase": "6.3.0",
+        "copy-webpack-plugin": "^12.0.2",
+        "core-js": "^3.38.1",
+        "cross-spawn": "^7.0.3",
+        "css-loader": "^7.1.2",
+        "cssnano": "^7.0.6",
+        "eslint-webpack-plugin": "^4.2.0",
+        "fast-glob": "^3.3.2",
+        "html-webpack-plugin": "^5.6.0",
+        "image-minimizer-webpack-plugin": "^4.1.0",
+        "jest": "^29.7.0",
+        "mini-css-extract-plugin": "^2.9.1",
+        "minimist": "^1.2.8",
+        "postcss": "^8.4.47",
+        "postcss-custom-media": "^11.0.1",
+        "postcss-editor-styles": "^0.5.0",
+        "postcss-import": "^16.1.0",
+        "postcss-loader": "^8.1.1",
+        "postcss-mixins": "^11.0.1",
+        "postcss-nested": "^6.2.0",
+        "postcss-nested-ancestors": "^3.0.0",
+        "postcss-preset-env": "^10.0.5",
+        "react-refresh": "^0.14.2",
+        "read-pkg": "^5.2.0",
+        "read-pkg-up": "^7.0.1",
+        "resolve-bin": "^1.0.1",
+        "sass-embedded": "^1.79.3",
+        "sass-loader": "^16.0.2",
+        "sharp": "^0.33.5",
+        "style-loader": "^4.0.0",
+        "stylelint-config-standard-scss": "^13.1.0",
+        "stylelint-webpack-plugin": "^5.0.1",
+        "svg-spritemap-webpack-plugin": "^4.5.1",
+        "svgo": "^3.3.2",
+        "typescript": "^5.6.2",
+        "url-loader": "^4.1.1",
+        "webpack": "^5.94.0",
+        "webpack-bundle-analyzer": "^4.10.2",
+        "webpack-dev-server": "^5.1.0",
+        "webpack-sources": "^3.2.3",
+        "webpackbar": "^6.0.1"
+    },
+    "devDependencies": {
+        "@changesets/cli": "^2.27.1",
+        "@digitalsilk/babel-preset-default": "^1.5.1",
+        "@digitalsilk/eslint-config": "^1.5.1",
+        "@digitalsilk/stylelint-config": "^1.5.1"
+    }
+}
