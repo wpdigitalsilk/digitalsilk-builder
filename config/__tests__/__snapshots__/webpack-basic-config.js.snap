@@ -187,7 +187,7 @@ exports[`webpack.config.js properly detects user config files in package mode 1`
     WebpackBarPlugin: {"name":"webpack","color":"green","reporters":["basic"],"reporter":null},
     CleanExtractedDeps: {},
     WebpackRemoveEmptyScriptsPlugin: {"enabled":true,"verbose":false,"extensions":{},"ignore":[],"remove":{}},
-    DSToolkitTscPlugin: {},
+    DSBuilderTypeScriptPlugin: {},
   ],
   "resolve": {
     "alias": {
@@ -407,7 +407,7 @@ exports[`webpack.config.js properly detects user config files in project mode 1`
     DependencyExtractionWebpackPlugin: {"combineAssets":false,"combinedOutputFile":null,"externalizedReport":false,"injectPolyfill":false,"outputFormat":"php","outputFilename":null,"useDefaults":true},
     CleanExtractedDeps: {},
     WebpackRemoveEmptyScriptsPlugin: {"enabled":true,"verbose":false,"extensions":{},"ignore":[],"remove":{}},
-    DSToolkitTscPlugin: {},
+    DSBuilderTypeScriptPlugin: {},
   ],
   "resolve": {
     "alias": {
@@ -466,7 +466,7 @@ exports[`webpack.config.js returns proper configs for package config 1`] = `
               "plugins": [],
               "presets": [
                 [
-                  "/packages/babel-preset-default/index.js",
+                  "/node_modules/@digitalsilk/babel-preset-default/index.js",
                   {
                     "targets": [
                       "> 1%",
@@ -646,7 +646,7 @@ exports[`webpack.config.js returns proper configs for package config 1`] = `
     WebpackBarPlugin: {"name":"webpack","color":"green","reporters":["basic"],"reporter":null},
     CleanExtractedDeps: {},
     WebpackRemoveEmptyScriptsPlugin: {"enabled":true,"verbose":false,"extensions":{},"ignore":[],"remove":{}},
-    DSToolkitTscPlugin: {},
+    DSBuilderTypeScriptPlugin: {},
   ],
   "resolve": {
     "alias": {
@@ -705,7 +705,7 @@ exports[`webpack.config.js returns proper configs for package config with common
               "plugins": [],
               "presets": [
                 [
-                  "/packages/babel-preset-default/index.js",
+                  "/node_modules/@digitalsilk/babel-preset-default/index.js",
                   {
                     "targets": [
                       "> 1%",
@@ -885,7 +885,7 @@ exports[`webpack.config.js returns proper configs for package config with common
     WebpackBarPlugin: {"name":"webpack","color":"green","reporters":["basic"],"reporter":null},
     CleanExtractedDeps: {},
     WebpackRemoveEmptyScriptsPlugin: {"enabled":true,"verbose":false,"extensions":{},"ignore":[],"remove":{}},
-    DSToolkitTscPlugin: {},
+    DSBuilderTypeScriptPlugin: {},
   ],
   "resolve": {
     "alias": {
@@ -945,7 +945,7 @@ exports[`webpack.config.js returns proper configs for package config with peer d
               "plugins": [],
               "presets": [
                 [
-                  "/packages/babel-preset-default/index.js",
+                  "/node_modules/@digitalsilk/babel-preset-default/index.js",
                   {
                     "targets": [
                       "> 1%",
@@ -1125,7 +1125,7 @@ exports[`webpack.config.js returns proper configs for package config with peer d
     WebpackBarPlugin: {"name":"webpack","color":"green","reporters":["basic"],"reporter":null},
     CleanExtractedDeps: {},
     WebpackRemoveEmptyScriptsPlugin: {"enabled":true,"verbose":false,"extensions":{},"ignore":[],"remove":{}},
-    DSToolkitTscPlugin: {},
+    DSBuilderTypeScriptPlugin: {},
   ],
   "resolve": {
     "alias": {
@@ -1183,7 +1183,7 @@ exports[`webpack.config.js returns proper configs for project configs 1`] = `
               "plugins": [],
               "presets": [
                 [
-                  "/packages/babel-preset-default/index.js",
+                  "/node_modules/@digitalsilk/babel-preset-default/index.js",
                   {
                     "targets": [
                       "> 1%",
@@ -1372,7 +1372,7 @@ exports[`webpack.config.js returns proper configs for project configs 1`] = `
     DependencyExtractionWebpackPlugin: {"combineAssets":false,"combinedOutputFile":null,"externalizedReport":false,"injectPolyfill":false,"outputFormat":"php","outputFilename":null,"useDefaults":true},
     CleanExtractedDeps: {},
     WebpackRemoveEmptyScriptsPlugin: {"enabled":true,"verbose":false,"extensions":{},"ignore":[],"remove":{}},
-    DSToolkitTscPlugin: {},
+    DSBuilderTypeScriptPlugin: {},
   ],
   "resolve": {
     "alias": {

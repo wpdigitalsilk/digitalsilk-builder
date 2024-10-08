@@ -35,7 +35,7 @@ exports[`webpack.config.js adds devServer config when passing the --dev-server f
               "plugins": [],
               "presets": [
                 [
-                  "/packages/babel-preset-default/index.js",
+                  "/node_modules/@digitalsilk/babel-preset-default/index.js",
                   {
                     "targets": [
                       "> 1%",
@@ -216,7 +216,7 @@ exports[`webpack.config.js adds devServer config when passing the --dev-server f
     WebpackBarPlugin: {"name":"webpack","color":"green","reporters":["basic"],"reporter":null},
     CleanExtractedDeps: {},
     WebpackRemoveEmptyScriptsPlugin: {"enabled":true,"verbose":false,"extensions":{},"ignore":[],"remove":{}},
-    DSToolkitTscPlugin: {},
+    DSBuilderTypeScriptPlugin: {},
   ],
   "resolve": {
     "alias": {
@@ -437,7 +437,7 @@ exports[`webpack.config.js allows changing browsersync port 1`] = `
     DependencyExtractionWebpackPlugin: {"combineAssets":false,"combinedOutputFile":null,"externalizedReport":false,"injectPolyfill":false,"outputFormat":"php","outputFilename":null,"useDefaults":true},
     CleanExtractedDeps: {},
     WebpackRemoveEmptyScriptsPlugin: {"enabled":true,"verbose":false,"extensions":{},"ignore":[],"remove":{}},
-    DSToolkitTscPlugin: {},
+    DSBuilderTypeScriptPlugin: {},
   ],
   "resolve": {
     "alias": {
@@ -657,7 +657,7 @@ exports[`webpack.config.js includes webpack-bundle-analyzer when using --analyze
     DependencyExtractionWebpackPlugin: {"combineAssets":false,"combinedOutputFile":null,"externalizedReport":false,"injectPolyfill":false,"outputFormat":"php","outputFilename":null,"useDefaults":true},
     CleanExtractedDeps: {},
     WebpackRemoveEmptyScriptsPlugin: {"enabled":true,"verbose":false,"extensions":{},"ignore":[],"remove":{}},
-    DSToolkitTscPlugin: {},
+    DSBuilderTypeScriptPlugin: {},
     BundleAnalyzerPlugin: {},
   ],
   "resolve": {
@@ -878,7 +878,7 @@ exports[`webpack.config.js includes webpack-bundle-analyzer when using --analyze
     DependencyExtractionWebpackPlugin: {"combineAssets":false,"combinedOutputFile":null,"externalizedReport":false,"injectPolyfill":false,"outputFormat":"php","outputFilename":null,"useDefaults":true},
     CleanExtractedDeps: {},
     WebpackRemoveEmptyScriptsPlugin: {"enabled":true,"verbose":false,"extensions":{},"ignore":[],"remove":{}},
-    DSToolkitTscPlugin: {},
+    DSBuilderTypeScriptPlugin: {},
   ],
   "resolve": {
     "alias": {
@@ -937,7 +937,7 @@ exports[`webpack.config.js returns proper configs for package config with common
               "plugins": [],
               "presets": [
                 [
-                  "/packages/babel-preset-default/index.js",
+                  "/node_modules/@digitalsilk/babel-preset-default/index.js",
                   {
                     "targets": [
                       "> 1%",
@@ -1117,7 +1117,7 @@ exports[`webpack.config.js returns proper configs for package config with common
     WebpackBarPlugin: {"name":"webpack","color":"green","reporters":["basic"],"reporter":null},
     CleanExtractedDeps: {},
     WebpackRemoveEmptyScriptsPlugin: {"enabled":true,"verbose":false,"extensions":{},"ignore":[],"remove":{}},
-    DSToolkitTscPlugin: {},
+    DSBuilderTypeScriptPlugin: {},
   ],
   "resolve": {
     "alias": {
@@ -1176,7 +1176,7 @@ exports[`webpack.config.js takes the --target option into account 1`] = `
               "plugins": [],
               "presets": [
                 [
-                  "/packages/babel-preset-default/index.js",
+                  "/node_modules/@digitalsilk/babel-preset-default/index.js",
                   {
                     "targets": [
                       "> 1%",
@@ -1356,7 +1356,7 @@ exports[`webpack.config.js takes the --target option into account 1`] = `
     WebpackBarPlugin: {"name":"webpack","color":"green","reporters":["basic"],"reporter":null},
     CleanExtractedDeps: {},
     WebpackRemoveEmptyScriptsPlugin: {"enabled":true,"verbose":false,"extensions":{},"ignore":[],"remove":{}},
-    DSToolkitTscPlugin: {},
+    DSBuilderTypeScriptPlugin: {},
   ],
   "resolve": {
     "alias": {
