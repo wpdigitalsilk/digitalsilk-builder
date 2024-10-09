@@ -1,7 +1,10 @@
 node_modules
-examples
 dist
 .vscode
 package-lock.json
 __tests__
+__fixtures__
 test-utils
+.idea
+.changeset
+.github
