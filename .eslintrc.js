@@ -1,5 +1,5 @@
 module.exports = {
-	extends: ['@digitalsilk/eslint-config/node', '@digitalsilk/eslint-config/jest', '@digitalsilk/eslint-config'],
+	extends: ['@digitalsilk/eslint-config/node', '@digitalsilk/eslint-config/jest'],
 	ignorePatterns: ['node_modules', '__tests__', 'test-utils', 'jest'],
 	rules: {
 		'global-require': 'off',
