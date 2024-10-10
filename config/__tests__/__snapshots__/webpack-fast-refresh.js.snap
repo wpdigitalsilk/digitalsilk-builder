@@ -17,13 +17,16 @@ exports[`webpack.config.js includes react-webpack-fast-refresh with the --hot op
     "devMiddleware": {
       "writeToDisk": true,
     },
-    "headers": {
-      "Access-Control-Allow-Origin": "*",
-      "disableHostCheck": true,
-    },
     "hot": "only",
     "liveReload": false,
     "port": 8000,
+    "static": {
+      "directory": "/dist",
+      "watch": false,
+    },
+    "watchFiles": [
+      "dist/blocks/**/*.css",
+    ],
   },
   "devtool": "source-map",
   "entry": () => getEntryPoints(config),

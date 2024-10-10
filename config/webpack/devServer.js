@@ -1,3 +1,4 @@
+const path = require('path');
 module.exports = ({ isPackage, projectConfig: { devServer, devURL, hot, devServerPort } }) => {
 	if (!devServer && !hot) {
 		return undefined;
@@ -20,19 +21,17 @@ module.exports = ({ isPackage, projectConfig: { devServer, devURL, hot, devServe
 		}
 
 		return {
-			// static: {
-			// 	directory: resolve(process.cwd(), join('dist')), // Base directory for the dev server
-			// },
+			static: {
+				directory: path.resolve(process.cwd(), path.join('dist')),
+				watch:false
+			},
+			watchFiles: ['dist/blocks/**/*.css'],
 			devMiddleware: {
 				writeToDisk: true,
 			},
 			allowedHosts,
 			hot: 'only',
 			liveReload: false,
-			headers: {
-				disableHostCheck: true,
-				'Access-Control-Allow-Origin': '*',
-			},
 			client: {
 				overlay: {
 					errors: true,
