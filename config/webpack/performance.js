@@ -5,6 +5,7 @@
  *
  * @returns {number} The size in bytes
  */
+
 const kb = (size) => {
 	return size * 1024;
 };

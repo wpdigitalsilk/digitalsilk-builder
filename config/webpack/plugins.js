@@ -14,15 +14,7 @@ const RemoveEmptyScriptsPlugin = require('./plugins/remove-empty-scripts');
 const CleanExtractedDeps = require('./plugins/clean-extracted-deps');
 const DSBuilderTypeScriptPlugin = require('./plugins/typescript');
 
-const {
-	hasStylelintConfig,
-	fromConfigRoot,
-	hasProjectFile,
-	getArgFromCLI,
-	maybeInsertStyleVersionHash,
-} = require('../../utils');
-
-const { isPackageInstalled } = require('../../utils/package');
+const { hasStylelintConfig, fromConfigRoot, hasProjectFile, maybeInsertStyleVersionHash } = require('../../utils');
 
 const removeDistFolder = (file) => {
 	return file.replace(/(^\.\/dist\/)|^dist\//, '');
@@ -35,16 +27,8 @@ const webpackbarArguments = process.env.JEST_WORKER_ID !== undefined ? { reporte
 module.exports = ({
 	isPackage,
 	isProduction,
-	projectConfig: {
-		devServer,
-		filenames,
-		devServerPort,
-		paths,
-		wpDependencyExternals,
-		analyze,
-		hot,
-		useBlockAssets,
-	},
+	projectConfig: { devServer, filenames, devServerPort, paths, wpDependencyExternals, analyze, hot, useBlockAssets },
+
 	packageConfig: { style },
 	buildFiles,
 }) => {

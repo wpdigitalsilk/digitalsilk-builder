@@ -1,8 +1,8 @@
 const displayWebpackStats = (err, stats) => {
 	if (err) {
-		console.error(err.stack || err);
+		console.error(err.stack || err); // eslint-disable-line
 		if (err.details) {
-			console.error(err.details);
+			console.error(err.details); // eslint-disable-line
 		}
 		return;
 	}

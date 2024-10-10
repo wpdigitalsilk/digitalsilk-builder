@@ -84,7 +84,7 @@ module.exports = ({ file, env }) => {
 							zindex: false,
 						},
 					],
-			  }
+				}
 			: false;
 
 	return config;

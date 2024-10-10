@@ -8,3 +8,4 @@ test-utils
 .idea
 .changeset
 .github
+jest
