@@ -1,6 +1,6 @@
 {
     "name": "digitalsilk-builder",
-    "version": "0.0.9",
+    "version": "0.1.0",
     "description": "Digital Silk asset builder for Gutenberg projects",
     "homepage": "https://github.com/wpdigitalsilk/digitalsilk-builder/blob/master/README.md",
     "repository": {
@@ -60,7 +60,7 @@
         "read-pkg": "5.2.0",
         "read-pkg-up": "7.0.1",
         "resolve-bin": "^1.0.1",
-        "sass-embedded": "^1.79.4",
+        "sass-embedded": "^1.80.3",
         "sass-loader": "^16.0.2",
         "sharp": "^0.33.5",
         "style-loader": "^4.0.0",
