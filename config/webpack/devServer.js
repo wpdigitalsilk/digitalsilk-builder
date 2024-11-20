@@ -31,7 +31,7 @@ module.exports = ({ isPackage, projectConfig: { devServer, devURL, hot, devServe
 				writeToDisk: true,
 			},
 			allowedHosts,
-			hot: 'only',
+			hot: true,
 			liveReload: true,
 			client: {
 				overlay: {
